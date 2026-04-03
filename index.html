@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVA-WIKI | Ketameter & Jansermessen</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --bg: #020508;
+            --surface: #0a111a;
+            --accent: #00f2ff; /* Cyber-Blue */
+            --accent-dim: #006b70;
+            --text: #e1e8ed;
+            --warning: #ff3e3e;
+            --border: #1b2d41;
+            --glow: rgba(0, 242, 255, 0.2);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            line-height: 1.6;
+        }
+
+        /* Sidebar Nav */
+        nav {
+            width: 280px;
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            position: fixed;
+            padding: 2rem 1rem;
+            overflow-y: auto;
+        }
+
+        nav h2 {
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--accent-dim);
+            padding-bottom: 0.5rem;
+        }
+
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { margin-bottom: 0.8rem; }
+        nav ul ul { padding-left: 1rem; margin-top: 0.5rem; }
+        
+        nav a {
+            color: #8899a6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+
+        nav a:hover { color: var(--accent); text-shadow: 0 0 8px var(--accent); }
+
+        /* Main Content */
+        main {
+            margin-left: 280px;
+            flex: 1;
+            padding: 4rem 10%;
+            max-width: 1200px;
+        }
+
+        .doc-header {
+            border-left: 5px solid var(--accent);
+            padding-left: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        h1 { font-size: 3rem; margin: 0; color: var(--accent); text-transform: uppercase; }
+        h2 { font-size: 1.8rem; color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-top: 4rem; }
+        h3 { color: var(--accent-dim); text-transform: uppercase; margin-top: 2.5rem; }
+
+        .wiki-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .formula-box {
+            background: #000;
+            border: 1px solid var(--accent-dim);
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.05);
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 0.7rem;
+            background: var(--accent-dim);
+            color: #000;
+            padding: 2px 8px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        td { padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        
+        strong { color: var(--accent); }
+        u { text-decoration-color: var(--accent-dim); }
+
+        .legal-section {
+            border: 1px solid var(--warning);
+            background: rgba(255, 62, 62, 0.05);
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .legal-section h2 { color: var(--warning); border-color: var(--warning); }
+
+        .critic-box {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.4rem;
+            padding: 3rem;
+            color: var(--accent);
+            background: linear-gradient(to right, transparent, var(--surface), transparent);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: var(--accent-dim); }
+
+        @media (max-width: 900px) {
+            nav { display: none; }
+            main { margin-left: 0; padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2>Inhaltsverzeichnis</h2>
+    <ul>
+        <li><a href="#KETAMETER">1 KETAMETER</a></li>
+        <li><a href="#Nasenverkehrsamt">2 Nasenverkehrsamt</a></li>
+        <li><a href="#Geschichte">3 Geschichte</a></li>
+        <li><a href="#Definition">4 Definition</a></li>
+        <li><a href="#Messverfahren">5 Messverfahren (Jansermessen)</a>
+            <ul>
+                <li><a href="#Umweltparameter">5.1 Umweltparameter</a></li>
+                <li><a href="#Dariumente">5.2 Dariumente</a></li>
+            </ul>
+        </li>
+        <li><a href="#Mitzugsregister">6 NAVA-Mitzugsregister</a></li>
+        <li><a href="#Rechtliches">7 Rechtliche Einordnung</a></li>
+        <li><a href="#Kritik">8 Kritik</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="doc-header">
+        <p style="color: var(--accent-dim); margin-bottom: 0;">OFFIZIELLE DOKUMENTATION // REF-NR: 2026-ETA</p>
+        <h1 id="KETAMETER">KETAMETER</h1>
+    </div>
+
+    <section>
+        <p>Der <strong>Ketameter</strong> (Einheitenzeichen: <strong><big>✓</big></strong> oder <strong><big>ETA</big></strong>) ist ein klar definierter Maßstab zur exakten Erfassung von Linien. Potenziell auftretende Fluktuationen im Verlauf des raumzeitlichen KontinUUms wurden selbstverständlich berücksichtigt. Es gilt als Bezugsstandard für den internationalen Meter mit hoher Realitätsfluktuation.</p>
+    </section>
+
+    <section id="Nasenverkehrsamt">
+        <h2>Nasenverkehrsamt</h2>
+        <p>Das <strong>Nasenverkehrsamt</strong> (kurz <strong>NAVA</strong>) ist eine am 1. Januar 2026 gegründete Oberbehörde zur Überwachung, Eichung und Standardisierung von Zonen mit hoher Realitätsfluktuationen. Das NAVA ist der alleinige Herausgebe des Messverfahren <strong>„Jansermessen“</strong> und der dazugehörigen Einheit <strong>Ketameter (ETA)</strong>.</p>
+    </section>
+
+    <section id="Geschichte" class="wiki-card">
+        <div class="status-badge">HISTORIE</div>
+        <h2>Geschichte</h2>
+        <p>Die Notwendigkeit eines geeichten Mess- und Einzugsverfahren ergab sich aus der Variabilität der vermessenden Person und der dadurch unterschiedlich stark auftretenden Anomalien der Naturgesetze. Im Rahmen einer mehrjährigen Studie wurden resultierende Vektoreinflüsse bei der Aufnahme von Linien neutralisiert und ein Referenzsystem ausgearbeitet. Die zuvor verwendete <strong>„NAVA-Brückenformel“</strong> basiert nicht auf „objektiver Realität“, sondern auf „gefühlter Distanz“ der Einwirkung.</p>
+        
+        <p>Der <strong>Raketa (Rk) Wert</strong> aus der NAVA-Brückenformel verwendet den unpräzisen <strong>Nasenfaktor (NF)</strong>, der mit dem <strong>Einzugswinkels (cos(α))</strong> multipliziert, durch die Quadratwurzel der <strong>Länge (L)</strong> subtrahiert und mit der <strong>Qualität (Q)</strong> addiert wird.</p>
+        
+        <div class="formula-box">
+            \[ 1Rk = \frac{NF \cdot \cos(\alpha)}{\sqrt{L}} + Q \]
+        </div>
+    </section>
+
+    <section id="Definition">
+        <h2>Definition</h2>
+        <p>Der Ketameter ist eine lineare Konstante, das Verhältnis von <strong>Distanz (D)</strong> zur <strong>Qualität (Q)</strong> und dem <strong>Body-Mass-Index (BMI)</strong> des Messenden Produktes. Er definiert die minimal erforderliche Strecke, um direkten Einfluss auf die Naturgesetze des Zielraums auszuüben.</p>
+        
+        <div class="formula-box">
+            <h3 style="margin-top: 0;">\[ \eta = D \cdot Q \cdot BMI \]</h3>
+        </div>
+
+        <p>Der IST-Wert von <strong>D (Distanz)</strong> muss durch eine Bemessung in „cm“ des metrischen System (SI) erfolgen. Er deklariert die lineare Gerade der Einzugsstrecke im Raum.</p>
+
+        <p>Die richtigen Bestimmung der <strong>Q (Qualität)</strong> wird an der "<strong>Qeta-Skalar</strong>" abgelesen:</p>
+        <ul>
+            <li><em><u>1Qet:</u></em> sehr gut</li>
+            <li><em><u>2Qeta</u></em><strong>:</strong> gut</li>
+            <li><em><u>3Qeti:</u></em> ausreichend</li>
+            <li><em><u>4Qeto:</u></em> befriedigend</li>
+            <li><em><u>5Qete:</u></em> mangelhaft</li>
+            <li><em><u>6Qeter:</u></em> ungenügend</li>
+        </ul>
+
+        <p>Der <strong>BMI (Body-Mass-Index)</strong> wird berechnet, indem die Körpermasse (in Kilogramm) durch das Quadrat der Körpergröße (in Metern) geteilt wird.</p>
+    </section>
+
+    <section id="Messverfahren">
+        <h2>Messverfahren (Jansermessen)</h2>
+        <p>Das zur Bestimmung genutzte Verfahren wird als <strong>"Jansermessen"</strong> bezeichnet. Im Gegensatz zur klassischen Mess- und Einzugstechnik berücksichtigt das "Jansermessen" zusätzlich die <strong>„Umweltparameter“</strong>, sowie die sogenannten <strong>„Dariumente“</strong>.</p>
+        <p>Umgangssprachlich werden <em>2 Ketameter</em> <strong>„Jans“</strong> und <em>6 Ketameter</em> <strong>"Tjas"</strong> genannt.</p>
+
+        <h3 id="Umweltparameter">Umweltparameter</h3>
+        <ul>
+            <li><em><u><big>Plattenbeschaffenheit:</big></u></em> Die Mindestgesamtgröße des Messaufbaus, um gravitative Anomalien zu vermeiden.</li>
+            <li><em><u><big>Rohrbezugspunkt:</big></u></em> Der Durchmesser muss innerhalb der zulässigen 3mm bis 10mm liegen.</li>
+            <li><em><u><big>Kartenabzug:</big></u></em> Die Distanz der Bezugslinie muss Kartografisch vorgelegt werden.</li>
+        </ul>
+
+        <h3 id="Dariumente">Dariumente</h3>
+        <p>Alle Vorschriften zur Vermessung und Erfassung eines “Ketameters“ wurden in die <strong>„Dariumente“</strong> eingetragen:</p>
+        
+        <p><strong><big>1.Vek-bei (V<sub>b</sub>)</big></strong> ist eine <strong>molekulare Richtgröße</strong> zur Klassifizierung der Materialbeschaffenheit anhand der Korngröße. Sie dient als Indikator für die strukturelle Vorhersagbarkeit eines Gefüges.</p>
+        <ul>
+            <li><em><u><big>V<sub>b</sub> 0,1 (Extrem feinkörnig):</big></u></em> Entspricht einer Feinheit von <em>0,01 mm</em></li>
+            <li><em><u><big>V<sub>b</sub> 1,0 (Standard-Körnung):</big></u></em> Entspricht <em>0,1 mm</em> (industrieller Referenzwert).</li>
+            <li><em><u><big>V<sub>b</sub> > 1,5 (Grobe Körnung):</big></u></em> Kritischer Bereich. Realitätsrauschen tritt auf.</li>
+        </ul>
+
+        <p><strong><big>
