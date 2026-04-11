@@ -196,10 +196,10 @@
 
     <section id="Definition">
         <h2>Definition</h2>
-        <p>Der Ketameter ist eine lineare Konstante, das Verhältnis von <strong>Distanz (D)</strong> zur <strong>Qualität (Q)</strong> und dem <strong>Body-Mass-Index (BMI)</strong> des Messenden Produktes. Er definiert die minimal erforderliche Strecke, um direkten Einfluss auf die Naturgesetze des Zielraums auszuüben.</p>
+        <p>Der Ketameter ist eine lineare Konstante, die sich aus dem Verhältnis von <strong>Distanz (D)</strong> zur <strong>Qualität (Q)</strong> und dem <strong>Body-Mass-Index (BMI)</strong> des Messenden ergibt. Er definiert die minimal erforderliche Strecke, um direkten Einfluss auf die Naturgesetze des Zielraums auszuüben.</p>
         
         <div class="formula-box">
-            <h3 style="margin-top: 0;">\[ \eta = D \cdot Q \cdot BMI \]</h3>
+            <h3 style="margin: 0;">\[ 1ETA = D \cdot Q \cdot BMI \]</h3>
         </div>
 
         <p>Der IST-Wert von <strong>D (Distanz)</strong> muss durch eine Bemessung in „cm“ des metrischen System (SI) erfolgen. Er deklariert die lineare Gerade der Einzugsstrecke im Raum.</p>
@@ -214,7 +214,7 @@
             <li><em><u>6Qeter:</u></em> ungenügend</li>
         </ul>
 
-        <p>Der <strong>BMI (Body-Mass-Index)</strong> wird berechnet, indem die Körpermasse (in Kilogramm) durch das Quadrat der Körpergröße (in Metern) geteilt wird.</p>
+        <p>Zur Berechnung des <strong>BMI (Body-Mass-Index)</strong> wird die Körpermasse (in Kilogramm) durch das Quadrat der Körpergröße (in Metern) geteilt.</p>
     </section>
 
     <section id="Messverfahren">
@@ -243,16 +243,62 @@
         <table>
             <tr><td>K 0,0</td><td>Vakuum-Fokus: Absolute strukturelle Starre.</td></tr>
             <tr><td>K 1,0</td><td><strong>Standard-Resonanz</strong>: Referenzwert. Stabil.</td></tr>
-            <tr><td>K 2,0</td><td>Stochastische Drift: Person verliert vertikale Stabilisierung.</td></tr>
+            <tr><td>K 2,0</td><td>Stochastische Drift: Vermesser verliert vertikale Stabilisierung.</td></tr>
             <tr><td>K 3,0</td><td>System-Kollaps: Totale molekulare Entkopplung.</td></tr>
         </table>
 
-        <p><strong><big>3.Cram (C)</big></strong> definiert die <strong>maximal tolerierte Linienbreite</strong> (1 Cram = 2mm SI).</p>
-        
-        <p><strong><big>4.Tjanzug (E<sub>tj</sub>)</big></strong> bezeichnet den <strong>initialen kinetischen Impuls</strong>.</p>
-        <div class="formula-box">
-            \[ E_{tj} = \frac{K \cdot C}{\sqrt{Vb}} \cdot \Phi \]
+        <p><strong><big>3.Cram (C)</big></strong> definiert die <strong>maximal tolerierte Linienbreite</strong>. Er stellt sicher, dass die grafische Repräsentanz der Linie mit dem Rohrbezugspunkt korrespondiert, um das richtige Gemisch von Luft zu Material beim Tjanzug sicherzustellen.</p>
+
+        <div class="wiki-card">
+            <ul style="list-style: none; padding: 0;">
+                <li>
+                    <em><u><big>C 0,5 (Präzisions-Eichung):</big></u></em> 
+                    Entspricht <strong>1 mm</strong>. Die Linienführung ist absolut scharfkantig. Formeln behalten ihre volle Gültigkeit; es gibt keine Überlappung von Variablen.
+                </li>
+                <li style="margin-top: 1.5rem;">
+                    <em><u><big>C 1,0 (Standard-Cram):</big></u></em> 
+                    Entspricht <strong>1,5 mm</strong> (1 Cram). Der industrielle Referenzwert. Hier ist die maximale Konturschärfe erreicht.
+                </li>
+                <li style="margin-top: 1.5rem;">
+                    <em><u><big>C > 1,5 (Unschärfe):</big></u></em> 
+                    Kritischer Bereich. Ab einem Wert von <strong>C > 1,5</strong> (Linienbreite > 2 mm) tritt die grafische Unschärfe ein. Die Dicke der Linie beginnt, den Punkt des Bezugsrohres fest zu setzen.
+                </li>
+            </ul>
         </div>
+        
+        <section id="Tjanzug-Sub" style="margin-top: 3rem;">
+            <p><strong><big>4.Tjanzug (E<sub>tj</sub>)</big></strong> bezeichnet den <strong>initialen kinetischen Impuls</strong>, der notwendig ist, um die Trägheit des Ausgangszustands zu überwinden und eine konsistente Transition in den Zielraum zu gewährleisten. Die E<sub>tj</sub> fungiert als energetisches Bindeglied zwischen der <em>Materialbeschaffenheit (V<sub>b</sub>)</em> und der systemischen <em>Dichte (K)</em>.</p>
+
+            <p>Die Berechnung des Tjanzug ist direkt abhängig von den Parametern der Eichung:</p>
+
+            <div class="formula-box">
+                <p style="color: var(--accent-dim); margin-bottom: 1rem; font-size: 0.8rem;">FORMEL FÜR KINETISCHE TRANSITION</p>
+                \[ E_{tj} = \frac{K \cdot C}{\sqrt{V_b}} \cdot \Phi \]
+            </div>
+
+            <div class="wiki-card">
+                <table>
+                    <tr>
+                        <td style="width: 30%;"><strong>K (Kirst)</strong></td>
+                        <td>Neuro-somatische Belastungsgrenze. Bestimmt die Stabilität des Impulses.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C (Cram)</strong></td>
+                        <td>Linienpräzision. Skaliert die räumliche Ausdehnung des Zuges.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>V<sub>b</sub> (Vek-bei)</strong></td>
+                        <td>Molekulare Widerstandskonstante. Je feiner das Korn, desto effizienter die E<sub>tj</sub>.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&Phi; (Phi)</strong></td>
+                        <td>Konstante der Realitätsfluktuation (Janser-Konstante).</td>
+                    </tr>
+                </table>
+            </div>
+
+            <p>Ein zu niedriger <strong>E<sub>tj</sub>-Wert</strong> führt zum Abbruch der Transition, während ein kritisch hoher Wert (bei K > 2,0) das Risiko eines <em>"Tjanobyl-Events"</em> exponentiell erhöht.</p>
+        </section>
     </section>
 
     <section id="Mitzugsregister" class="wiki-card">
@@ -262,18 +308,18 @@
     </section>
 
     <section id="Rechtliches" class="legal-section">
-        <h2>Rechtliche Einordnung und Sanktionen</h2>
+     <h2>Rechtliche Einordnung und Sanktionen</h2>
         <p>Das NAVA ist im Falle von <strong>Täuschungshandlungen</strong> oder der <strong>vorsätzlichen Divergenz</strong> ermächtigt, sämtliche erforderlichen Maßnahmen zur <strong>Ahndung</strong> dieser Verstöße zu ergreifen.</p>
         <p>Verstöße gegen die Dariumente wird behördlich als <strong>„Realitätsverweigerung“</strong> eingestuft. Dies führt zur sofortigen Annullierung der <strong>Einzugslizenz</strong>.</p>
     </section>
 
-    <section id="Kritik">
+  <section id="Kritik">
         <h2>Kritik</h2>
+        <p>Kritiker aus dem klassischen SI-System bemängeln, dass der Ketameter keine
+        mathematische Konstante darstellt. Das Nasenverkehrsamt weist diese
+        Kritik jedoch zurück mit dem Argument, dass:</p>
+        
         <div class="critic-box">
-            „wer misst, misst Mist, aber wer janst zieht, sieht Tjanobyl“
+            „wer misst, misst Mist, aber wer Janst zieht, sieht Tjanobyl“
         </div>
     </section>
-</main>
-
-</body>
-</html>
