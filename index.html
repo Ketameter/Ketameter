@@ -6,6 +6,7 @@
     <title>NAVA-WIKI | Ketameter & Jansermessen</title>
     
     <link rel="icon" type="image/jpeg" href="favicon.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg">
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -43,6 +44,18 @@
             overflow-y: auto;
         }
 
+        /* LOGO IN DER SIDEBAR */
+        .nav-logo {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 12px;
+            border: 1px solid var(--accent-dim);
+            box-shadow: 0 0 15px var(--glow);
+            object-fit: cover;
+        }
+
         nav h2 {
             font-size: 0.9rem;
             color: var(--accent);
@@ -51,6 +64,7 @@
             margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--accent-dim);
             padding-bottom: 0.5rem;
+            text-align: center;
         }
 
         nav ul { list-style: none; padding: 0; }
@@ -152,6 +166,8 @@
 <body>
 
 <nav>
+    <img src="favicon.jpg" alt="NAVA Logo" class="nav-logo">
+    
     <h2>Inhaltsverzeichnis</h2>
     <ul>
         <li><a href="#KETAMETER">1 KETAMETER</a></li>
