@@ -44,18 +44,6 @@
             overflow-y: auto;
         }
 
-        /* LOGO IN DER SIDEBAR */
-        .nav-logo {
-            width: 80px;
-            height: 80px;
-            display: block;
-            margin: 0 auto 1.5rem auto;
-            border-radius: 12px;
-            border: 1px solid var(--accent-dim);
-            box-shadow: 0 0 15px var(--glow);
-            object-fit: cover;
-        }
-
         nav h2 {
             font-size: 0.9rem;
             color: var(--accent);
@@ -64,7 +52,6 @@
             margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--accent-dim);
             padding-bottom: 0.5rem;
-            text-align: center;
         }
 
         nav ul { list-style: none; padding: 0; }
@@ -88,10 +75,25 @@
             max-width: 1200px;
         }
 
+        /* Anpassung für Logo neben Überschrift */
         .doc-header {
             border-left: 5px solid var(--accent);
             padding-left: 2rem;
             margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header-logo {
+            width: 250px; /* "Groß" wie gewünscht */
+            height: auto;
+            margin-left: 2rem;
+            filter: drop-shadow(0 0 10px var(--glow));
         }
 
         h1 { font-size: 3rem; margin: 0; color: var(--accent); text-transform: uppercase; }
@@ -160,14 +162,14 @@
         @media (max-width: 900px) {
             nav { display: none; }
             main { margin-left: 0; padding: 2rem; }
+            .doc-header { flex-direction: column; align-items: flex-start; }
+            .header-logo { margin-left: 0; margin-top: 1rem; width: 150px; }
         }
     </style>
 </head>
 <body>
 
 <nav>
-    <img src="favicon.jpg" alt="NAVA Logo" class="nav-logo">
-    
     <h2>Inhaltsverzeichnis</h2>
     <ul>
         <li><a href="#KETAMETER">1 KETAMETER</a></li>
@@ -188,8 +190,11 @@
 
 <main>
     <div class="doc-header">
-        <p style="color: var(--accent-dim); margin-bottom: 0;">OFFIZIELLE DOKUMENTATION // REF-NR: 2026-ETA</p>
-        <h1 id="KETAMETER">KETAMETER</h1>
+        <div class="header-text">
+            <p style="color: var(--accent-dim); margin-bottom: 0;">OFFIZIELLE DOKUMENTATION // REF-NR: 2026-ETA</p>
+            <h1 id="KETAMETER">KETAMETER</h1>
+        </div>
+        <img src="logohintergrund.png" alt="Logo" class="header-logo">
     </div>
 
     <section>
