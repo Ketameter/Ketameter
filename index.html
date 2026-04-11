@@ -10,6 +10,7 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <style>
         :root {
             --bg: #020508;
@@ -90,7 +91,7 @@
         }
 
         .header-logo {
-            width: 250px; /* "Groß" wie gewünscht */
+            width: 250px; 
             height: auto;
             margin-left: 2rem;
             filter: drop-shadow(0 0 10px var(--glow));
@@ -117,6 +118,7 @@
             margin: 2rem 0;
             border-radius: 8px;
             box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.05);
+            color: #ffffff; /* Formeln in Weiß */
         }
 
         .status-badge {
@@ -189,13 +191,13 @@
 </nav>
 
 <main>
-    <div class="doc-header">
+    <header class="doc-header">
         <div class="header-text">
             <p style="color: var(--accent-dim); margin-bottom: 0;">OFFIZIELLE DOKUMENTATION // REF-NR: 2026-ETA</p>
             <h1 id="KETAMETER">KETAMETER</h1>
         </div>
         <img src="logohintergrund.png" alt="Logo" class="header-logo">
-    </div>
+    </header>
 
     <section>
         <p>Der <strong>Ketameter</strong> (Einheitenzeichen: <strong><big>✓</big></strong> oder <strong><big>ETA</big></strong>) ist ein klar definierter Maßstab zur exakten Erfassung von Linien. Potenziell auftretende Fluktuationen im Verlauf des raumzeitlichen KontinUUms wurden selbstverständlich berücksichtigt. Es gilt als Bezugsstandard für den internationalen Meter mit hoher Realitätsfluktuation.</p>
@@ -209,6 +211,7 @@
     <section id="Geschichte" class="wiki-card">
         <div class="status-badge">HISTORIE</div>
         <h2>Geschichte</h2>
+        
         <p>Die Notwendigkeit eines geeichten Mess- und Einzugsverfahren ergab sich aus der Variabilität der vermessenden Person und der dadurch unterschiedlich stark auftretenden Anomalien der Naturgesetze. Im Rahmen einer mehrjährigen Studie wurden resultierende Vektoreinflüsse bei der Aufnahme von Linien neutralisiert und ein Referenzsystem ausgearbeitet. Die zuvor verwendete <strong>„NAVA-Brückenformel“</strong> basiert nicht auf „objektiver Realität“, sondern auf „gefühlter Distanz“ der Einwirkung.</p>
         
         <p>Der <strong>Raketa (Rk) Wert</strong> aus der NAVA-Brückenformel verwendet den unpräzisen <strong>Nasenfaktor (NF)</strong>, der mit dem <strong>Einzugswinkels (cos(α))</strong> multipliziert, durch die Quadratwurzel der <strong>Länge (L)</strong> subtrahiert und mit der <strong>Qualität (Q)</strong> addiert wird.</p>
@@ -220,15 +223,17 @@
 
     <section id="Definition">
         <h2>Definition</h2>
+        
         <p>Der Ketameter ist eine lineare Konstante, die sich aus dem Verhältnis von <strong>Distanz (D)</strong> zur <strong>Qualität (Q)</strong> und dem <strong>Body-Mass-Index (BMI)</strong> des Messenden ergibt. Er definiert die minimal erforderliche Strecke, um direkten Einfluss auf die Naturgesetze des Zielraums auszuüben.</p>
         
         <div class="formula-box">
-            <h3 style="margin: 0;">\[ 1ETA = D \cdot Q \cdot BMI \]</h3>
+            <h3 style="margin: 0; color: #ffffff;">\[ 1ETA = D \cdot Q \cdot BMI \]</h3>
         </div>
 
         <p>Der IST-Wert von <strong>D (Distanz)</strong> muss durch eine Bemessung in „cm“ des metrischen System (SI) erfolgen. Er deklariert die lineare Gerade der Einzugsstrecke im Raum.</p>
 
         <p>Die richtigen Bestimmung der <strong>Q (Qualität)</strong> wird an der "<strong>Qeta-Skalar</strong>" abgelesen:</p>
+        
         <ul>
             <li><em><u>1Qet:</u></em> sehr gut</li>
             <li><em><u>2Qeta</u></em><strong>:</strong> gut</li>
@@ -243,7 +248,9 @@
 
     <section id="Messverfahren">
         <h2>Messverfahren (Jansermessen)</h2>
+        
         <p>Das zur Bestimmung genutzte Verfahren wird als <strong>"Jansermessen"</strong> bezeichnet. Im Gegensatz zur klassischen Mess- und Einzugstechnik berücksichtigt das "Jansermessen" zusätzlich die <strong>„Umweltparameter“</strong>, sowie die sogenannten <strong>„Dariumente“</strong>.</p>
+        
         <p>Umgangssprachlich werden <em>2 Ketameter</em> <strong>„Jans“</strong> und <em>6 Ketameter</em> <strong>"Tjas"</strong> genannt.</p>
 
         <h3 id="Umweltparameter">Umweltparameter</h3>
@@ -257,6 +264,7 @@
         <p>Alle Vorschriften zur Vermessung und Erfassung eines “Ketameters“ wurden in die <strong>„Dariumente“</strong> eingetragen:</p>
         
         <p><strong><big>1.Vek-bei (V<sub>b</sub>)</big></strong> ist eine <strong>molekulare Richtgröße</strong> zur Klassifizierung der Materialbeschaffenheit anhand der Korngröße. Sie dient als Indikator für die strukturelle Vorhersagbarkeit eines Gefüges.</p>
+        
         <ul>
             <li><em><u><big>V<sub>b</sub> 0,1 (Extrem feinkörnig):</big></u></em> Entspricht einer Feinheit von <em>0,01 mm</em></li>
             <li><em><u><big>V<sub>b</sub> 1,0 (Standard-Körnung):</big></u></em> Entspricht <em>0,1 mm</em> (industrieller Referenzwert).</li>
@@ -264,6 +272,7 @@
         </ul>
 
         <p><strong><big>2.Kirst (K)</big></strong> bezeichnet die <strong>neuro-somatische Toleranzgrenze</strong> des Individuums. Er beschreibt das Verhältnis zwischen metabolischer Last und der verbleibenden Prozesspräzision.</p>
+        
         <table>
             <tr><td>K 0,0</td><td>Vakuum-Fokus: Absolute strukturelle Starre.</td></tr>
             <tr><td>K 1,0</td><td><strong>Standard-Resonanz</strong>: Referenzwert. Stabil.</td></tr>
@@ -332,16 +341,14 @@
     </section>
 
     <section id="Rechtliches" class="legal-section">
-     <h2>Rechtliche Einordnung und Sanktionen</h2>
+        <h2>Rechtliche Einordnung und Sanktionen</h2>
         <p>Das NAVA ist im Falle von <strong>Täuschungshandlungen</strong> oder der <strong>vorsätzlichen Divergenz</strong> ermächtigt, sämtliche erforderlichen Maßnahmen zur <strong>Ahndung</strong> dieser Verstöße zu ergreifen.</p>
         <p>Verstöße gegen die Dariumente wird behördlich als <strong>„Realitätsverweigerung“</strong> eingestuft. Dies führt zur sofortigen Annullierung der <strong>Einzugslizenz</strong>.</p>
     </section>
 
-  <section id="Kritik">
+    <section id="Kritik">
         <h2>Kritik</h2>
-        <p>Kritiker aus dem klassischen SI-System bemängeln, dass der Ketameter keine
-        mathematische Konstante darstellt. Das Nasenverkehrsamt weist diese
-        Kritik jedoch zurück mit dem Argument, dass:</p>
+        <p>Kritiker aus dem klassischen SI-System bemängeln, dass der Ketameter keine mathematische Konstante darstellt. Das Nasenverkehrsamt weist diese Kritik jedoch zurück mit dem Argument, dass:</p>
         
         <div class="critic-box">
             „wer misst, misst Mist, aber wer Janst zieht, sieht Tjanobyl“
